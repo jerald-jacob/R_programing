@@ -20,9 +20,12 @@ col_name<-colnames(my_mtcars)
 writeBin(col_name,wf)
 
 # then write another writeBin function to specify each columns in the newally created datframe  and finaly the operation 'wf'
+
 writeBin(c(my_mtcars$mpg,my_mtcars$cyl,my_mtcars$disp),wf)
 close(wf)
 
+# we have to read the binery file using the 'readBin' R function .firstly we create a veriable to assing the read file using the 
+# file function
 r_bf<-file("my_binary.bat","rb")
 
 
